@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+
+:root {
+    --bg: #f5f3ec;
+    --panel: #fdfcf7;
+    --dark: #111a2e;
+    --muted: #6b7384;
+    --accent: #0e7c86;
+    --accent-strong: #0a5960;
+    --border: #d9d3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    font-family: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    color: var(--accent);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.primary-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.95rem 1.4rem;
+    border-radius: 18px;
+    border: none;
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.primary-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.primary-btn:not(:disabled):hover {
+    transform: translateY(-1px);
+    background-color: var(--accent-strong);
+}
